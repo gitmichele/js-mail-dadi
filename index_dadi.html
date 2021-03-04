@@ -14,13 +14,12 @@
 
         for (x = Math.floor((Math.random() * 6) + 1); scoreArr.length < 2; x = Math.floor((Math.random() * 6) + 1)){
             
-            scoreArr = scoreArr + x; 
 
             if (scoreArr.length < 2){
-                continue
+                scoreArr = scoreArr + x; 
             }
 
-            else if (scoreArr.length = 2){
+            if (scoreArr.length >= 2){
                 var pcScore = scoreArr[0];
                 var userScore = scoreArr[1];
                 console.log('computer score: ' + pcScore + ' - your score: ' + userScore)
