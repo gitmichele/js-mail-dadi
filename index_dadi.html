@@ -16,10 +16,11 @@
             
 
             if (scoreArr.length < 2){
-                scoreArr = scoreArr + x; 
+                scoreArr.push(x); 
             }
 
             if (scoreArr.length == 2){
+                console.log(scoreArr)
                 var pcScore = scoreArr[0];
                 var userScore = scoreArr[1];
                 console.log('computer score: ' + pcScore + ' - your score: ' + userScore)
