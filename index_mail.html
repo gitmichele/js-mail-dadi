@@ -13,23 +13,14 @@
         var mailDatabase = ['mail1@prova.com', 'mail2@prova.com', 'mail3@prova.com', 'mail4@prova.com', 'mail5@prova.com']
         var mailUser = prompt('Inserisci la tua mail')
 
-        for (i = 0; i <= mailDatabase.length; i++){
+        var found = false;
+        for (i = 0; i < mailDatabase.length && !found; i++){
+            
+            var mail = mailDatabase[i];
 
-            var elem = mailDatabase[i];
-
-            // se email coincide esco dal ciclo
-            if (elem == mailUser){
-                console.log('correct mail')
-                break
+            if (mail == userMail) {
+                finded = true;
             }
-            // se email non coincide non loggo nulla fino a che non le ha provate tutte
-            else if (elem != mailUser && i < mailDatabase.length){
-                continue
-            }
-            // se nessuna email coincide loggo wrong mail
-            else{
-                console.log('wrong mail')
-            }   
         }
 
 
